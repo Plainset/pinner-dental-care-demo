@@ -2,10 +2,10 @@
 
 Operational handoff only. `OUTREACH_LOG.md` remains the source of truth.
 
-- Current phase: build complete, builder QA passed, awaiting reviewer score (round 1)
+- Current phase: **COMPLETE — passed review at 9.0/10 on round 2** (pass mark 7.5), after 1 fix round. Post-pass items applied.
 - Last trusted commit: initial build commit on `main`
 - Known untrusted state: none
-- Next exact action: reviewer scores out of 10; pass mark 7.5.
+- Next exact action: none for the build. Before anything is deployed: add a map to the Visit page, plus canonical, Open Graph and `LocalBusiness` structured data.
 - Deploy URL: not deployed. No outreach authorised.
 - Local preview: `pinner-dental-care-site` in `.claude/launch.json`, port 4180.
 - Flags for Alex:

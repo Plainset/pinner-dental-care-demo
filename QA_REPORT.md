@@ -83,3 +83,26 @@ The reviewer independently confirmed:
 **All 18 page × width combinations clean** — 0 upscale violations, 0 broken, 0 contrast
 violations, 0 text overflow, no horizontal scroll — at 320/390/768/1024/1440/1920.
 Functional 25/25. 0 tap targets under 24px.
+
+
+---
+
+# Reviewer round 2 — PASS at 9.0/10
+
+Professionalism 9, state 9.5, aesthetics & imagery 8.5. **Zero blocking defects.** The
+highest score of the five builds in this batch.
+
+Independently verified: exactly nine treatment areas (thirteen treatment URLs enumerated,
+two non-treatments and two nav sub-pages excluded); the ninth card's wording genuinely from
+their children's-dentistry page; regulated-content discipline intact across the new copy;
+the subgrid fix measured at **0px spread on card height and on both text offsets, in every
+row at every width from 736 to 1920**, against up to 52px before; `founders.jpg` correctly
+placed; manifest and disk in agreement at seven photographs.
+
+Five post-pass items applied — see `BUILD_BRIEF.md`. The most substantive is restoring
+`reception-corner.jpg`: my round-1 fix removed the only interior that broke the
+slatted-wall pattern, which the reviewer rightly called the wrong half of an otherwise
+correct change.
+
+Re-verified after: **all 18 page × width combinations clean**, functional 25/25, 0 tap
+targets under 24px.

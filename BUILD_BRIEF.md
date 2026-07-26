@@ -76,7 +76,11 @@ Dentistry is GDC-regulated and advertising is constrained. This build therefore:
 | Bus routes H11, H12, **H13 and 183** serve Pinner Station (Stop C) | contact page | visit |
 | Parking: Sainsbury's car park at 12 Barters Walk adjacent to the practice; Pinner Village Hall car park on Bridge Street; Love Lane car park — restrictions and time limits vary | contact page | visit |
 | Dr Ash Parmar is a general and cosmetic dentist on the team, **not a founder** | our-team | index |
-| Their own descriptions of each area (routine check-ups and hygiene; preventative and restorative including endodontics and fillings; veneers, composite bonding and smile makeovers; Invisalign and ceramic braces) | homepage | treatments |
+| Their own descriptions of each area (routine check-ups and hygiene; preventative and restorative including endodontics and fillings; whitening, composite bonding, veneers and smile makeovers; Invisalign and ceramic braces) | homepage | treatments |
+| Dental hygiene is offered alongside routine care | homepage treatments overview | treatments |
+| Implant treatment for replacing missing teeth and wider smile restoration | homepage treatments overview | treatments |
+| Oral surgery is performed at the practice, and it also accepts referrals in | /dental-treatments/oral-surgery | treatments |
+| Dental emergencies: urgent appointments, with a separate out-of-hours number | homepage + contact page | treatments |
 | "0% finance available" / patient finance | homepage | treatments |
 | Online booking through a secure portal | homepage | all pages |
 | Patients come from Pinner, Harrow, Northwood, Ruislip, Hatch End and North West London | homepage | index |
@@ -104,6 +108,7 @@ any of them; every person shown is a named member of staff photographed for the 
 | shopfront-evening.jpg | DSC01705 | 1600×1066 | yes | visit | the practice frontage lit at dusk, name and phone number on the glass |
 | logo-detail.jpg | DSC01629 | 1600×2401 | yes | treatments band | the practice's lotus mark on the slatted wall |
 | founders.jpg | Rosh_and_Rupal | 1125×1500 | yes | index — beside the founders copy | Dr Rosh and Rupal Patel together |
+| reception-corner.jpg | DSC01653 | 1600×2400 | yes | visit — below the shopfront | a corner of the reception: armchair, framed print, orchid against a dark blue wall |
 | rosh-patel.jpg | Rosh.jpg | 1125×1500 → 880×1173 | yes | index — team | Dr Rosh Patel |
 | rupal-patel.jpg | Rupal_Patel | 1125×1500 → 880×1173 | yes | index — team | Rupal Patel |
 | ash-parmar.jpg | Ash_Parmar | 1125×1500 → 880×1173 | yes | index — team | Dr Ash Parmar |
@@ -172,3 +177,40 @@ The reviewer verified the regulated-content discipline term by term and found **
 and noted that the practice's own live site carries "gold standard", "outstanding dentistry",
 "Real Patients, Real Results" and a before-and-after section, none of which this build
 reproduces.
+
+
+## Reviewer round 2 — PASS at 9.0/10, and the last changes
+
+Professionalism 9, state 9.5, aesthetics & imagery 8.5. **Zero blocking defects.**
+
+The reviewer enumerated every treatment URL on the live site — thirteen, of which two are not
+treatments and two are sub-pages their own nav indents beneath a parent (Invisalign under
+Orthodontics, EMS Airflow under Dental Hygiene) — and confirmed **exactly nine distinct
+areas**, mapping one-for-one onto the build. It also checked the ninth card's wording against
+their children's-dentistry page specifically because "a baby's first check-up to teenage
+orthodontics" reads like invention, and found it sourced.
+
+It re-ran the regulated-content sweep over the new copy: three benign hits, "specialist"
+still exactly once in the practice's own cancellation wording. And it measured the subgrid
+fix properly — **card-height spread 0px, `<h3>` offset spread 0px, `<p>` offset spread 0px in
+every row at every width**, against up to 52px before.
+
+Applied after the pass:
+
+1. **`reception-corner.jpg` restored.** The reviewer's best point: my round-1 fix moved
+   `founders.jpg` into place (right) but deleted the one interior that broke the
+   slatted-oak-wall pattern (wrong half). It now sits on the Visit page below the shopfront —
+   outside, then inside. The home page remains wall-heavy because that is how the practice's
+   own photography is shot; this at least stops the site as a whole being one wall.
+2. **Card 09 trimmed** from ~30 words to ~15, so it no longer forces dead space into the two
+   short cards beside it.
+3. **Band `object-position` 32% → 28%**, clearing the outer roundel's top arc.
+4. **Whitening added to the cosmetic card** — their own copy lists it first, and it is the
+   cosmetic treatment most people search for.
+5. **Four unrowed card descriptions added to Allowed Facts** (hygiene, implants, oral surgery,
+   emergencies), including the reviewer's finding that the practice performs oral surgery
+   in-house *and* accepts referrals in.
+
+Left undone and recorded: `visit.html` has no map. That is the real remaining gap on that
+page, and it belongs with the canonical/OG/`LocalBusiness` schema work in a deploy checklist
+rather than in a concept that is not deployed.

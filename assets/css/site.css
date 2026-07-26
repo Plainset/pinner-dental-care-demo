@@ -229,7 +229,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #fff; outline-offset:
 
 .band .frame { aspect-ratio: 16 / 6; }
 /* the source is 1600x2401 portrait; centring vertically cut the lotus mark in half */
-.band .frame > img { object-position: 50% 32%; }
+.band .frame > img { object-position: 50% 28%; }
 .figure-tall .frame { aspect-ratio: 3 / 4; }
 figure { margin: 0; }
 figcaption { font-size: 0.86rem; color: var(--muted); margin-top: 0.7rem; }
