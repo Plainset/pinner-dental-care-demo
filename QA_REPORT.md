@@ -50,3 +50,36 @@ Three found and fixed during this pass.
 
 ## Verdict
 **PASS** — handing to review.
+
+
+---
+
+# Reviewer round 1 — 8.0/10 FAIL, and builder fix round 1
+
+Professionalism 8, state 9.5, aesthetics & imagery 7.5.
+
+**Blocking: `treatments.html` claimed completeness it did not have.** The practice offers
+nine treatment areas; the build listed eight, missing Dentistry for Children — which has its
+own page and is advertised on the shopfront glass visible in `shopfront-evening.jpg`, an
+image this build uses. All fixed; see `BUILD_BRIEF.md` for the full list of eight changes.
+
+The reviewer independently confirmed:
+- **Regulated-content discipline holds.** A mechanical sweep for *best / leading / award /
+  expert / specialist / guarantee / painless / result / outcome / success rate / transform /
+  gold standard / advanced / proven / voted / rated / before and after / £ / $ / %* returned
+  three hits, all benign. "Specialist" appears exactly once, in the practice's own
+  cancellation-policy wording, collective, attached to no individual. No breach.
+- **Every fact verifies**, including the 4.9/213 figure, which is JS-injected on their site
+  and had to be rendered to confirm.
+- **All three of the builder's claimed fixes**: `#B0793F` on `#152B3E` is exactly 3.91:1 and
+  `--oak-lift #D9A76A` measures 6.69:1 in the live DOM; the brand subtitle is `display:none`
+  at 320 and fits exactly at 390+; the out-of-hours link now carries `min-height:26px`.
+- **The framing is justified** — it checked all 30 internal links on the practice's live site
+  and every one returns 200. It noted the framing is repeated in three files and one
+  statement would carry more weight; that is fair and left as-is only because each file has a
+  different reader.
+
+## Re-verification after fix round 1
+**All 18 page × width combinations clean** — 0 upscale violations, 0 broken, 0 contrast
+violations, 0 text overflow, no horizontal scroll — at 320/390/768/1024/1440/1920.
+Functional 25/25. 0 tap targets under 24px.

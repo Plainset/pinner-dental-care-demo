@@ -71,12 +71,16 @@ Dentistry is GDC-regulated and advertising is constrained. This build therefore:
 | Dr Rosh Patel — BDS Newcastle University 2006, principal dentist and co-founder; "over 20 years of experience in dentistry" | our-team | index |
 | Rupal Patel — co-founder | our-team | index |
 | Dr Ash Parmar — BDS hons (Sheffield), MJDF, PGCert Endodontics, PGDip Implant Dentistry | our-team | index |
-| Treatment areas: routine dental care; general dentistry; cosmetic dentistry; orthodontics; implants; dental emergencies; dental hygiene; oral surgery | homepage treatments overview | treatments, index |
+| **Nine** treatment areas: routine dental care; general dentistry; dental hygiene; cosmetic dentistry; orthodontics; implants; oral surgery; dental emergencies; **dentistry for children** | homepage treatments overview + /patient-information/dentistry-for-children | treatments, index |
+| Children's dentistry: gentle preventative care for children of all ages, from a baby's first check-up to teenage orthodontics, focused on prevention, education and building trust | /patient-information/dentistry-for-children | treatments |
+| Bus routes H11, H12, **H13 and 183** serve Pinner Station (Stop C) | contact page | visit |
+| Parking: Sainsbury's car park at 12 Barters Walk adjacent to the practice; Pinner Village Hall car park on Bridge Street; Love Lane car park — restrictions and time limits vary | contact page | visit |
+| Dr Ash Parmar is a general and cosmetic dentist on the team, **not a founder** | our-team | index |
 | Their own descriptions of each area (routine check-ups and hygiene; preventative and restorative including endodontics and fillings; veneers, composite bonding and smile makeovers; Invisalign and ceramic braces) | homepage | treatments |
 | "0% finance available" / patient finance | homepage | treatments |
 | Online booking through a secure portal | homepage | all pages |
 | Patients come from Pinner, Harrow, Northwood, Ruislip, Hatch End and North West London | homepage | index |
-| 3-minute walk from Pinner Underground (Metropolitan Line); bus routes H11 and H12 stop at Pinner Station (Stop C) | contact page | visit |
+| 3-minute walk from Pinner Underground (Metropolitan Line), with the practice's own verbatim walking directions | contact page | visit |
 
 ## Do Not Claim
 | Claim | Reason |
@@ -98,10 +102,8 @@ any of them; every person shown is a named member of staff photographed for the 
 |---|---|---|---|---|---|
 | waiting-room.jpg | DSC01592 | 1600×1066 | yes | index hero | the waiting area — slatted wood wall, practice logo, window onto Barters Walk |
 | shopfront-evening.jpg | DSC01705 | 1600×1066 | yes | visit | the practice frontage lit at dusk, name and phone number on the glass |
-| shopfront-day.jpg | DSC01700 | 1600×1600 | yes | visit | the frontage in daylight |
-| reception-corner.jpg | DSC01653 | 1600×2400 | yes | index | a corner of the reception — armchair, artwork, orchid |
 | logo-detail.jpg | DSC01629 | 1600×2401 | yes | treatments band | the practice's lotus mark on the slatted wall |
-| founders.jpg | Rosh_and_Rupal | 1125×1500 | yes | index — founders | Dr Rosh and Rupal Patel together |
+| founders.jpg | Rosh_and_Rupal | 1125×1500 | yes | index — beside the founders copy | Dr Rosh and Rupal Patel together |
 | rosh-patel.jpg | Rosh.jpg | 1125×1500 → 880×1173 | yes | index — team | Dr Rosh Patel |
 | rupal-patel.jpg | Rupal_Patel | 1125×1500 → 880×1173 | yes | index — team | Rupal Patel |
 | ash-parmar.jpg | Ash_Parmar | 1125×1500 → 880×1173 | yes | index — team | Dr Ash Parmar |
@@ -129,3 +131,44 @@ Rejected:
 
 ## Builder QA
 See `QA_REPORT.md`.
+
+
+## Reviewer round 1 — what changed (2026-07-27)
+
+Scored 8.0 but **failed on one accuracy defect**, correctly.
+
+**The practice offers nine treatment areas; I carried eight.** I missed **Dentistry for
+Children**, which has its own page on their site and is advertised on their shopfront glass
+— glass that is visible in a photograph this build uses. Worse, the page asserted
+"Everything the practice offers, described in its own words", and that was untrue twice
+over: the list was incomplete, and four of the eight descriptions were my own condensation
+rather than their wording.
+
+Fixed:
+1. **Ninth card added** — Dentistry for Children, from their own copy. "Eight areas of care"
+   → "Nine areas of care". The completeness claim is gone: the page now says "The care the
+   practice offers, in summary", which is what it actually is.
+2. **All four bus routes** — H11, H12, **H13 and 183**. My brief had recorded only the first
+   two, so the error started here, not on the page. A visitor on the H13 or the 183 was
+   being told their route did not serve the practice.
+3. **Parking added to the Visit page** — the three car parks the practice names (Sainsbury's
+   at 12 Barters Walk, Pinner Village Hall, Love Lane). A Visit page without parking
+   under-served its one job.
+4. **"The founders" no longer names someone who isn't one.** Dr Ash Parmar is a general and
+   cosmetic dentist, not a founder. The section is now "The people / Who you will meet", the
+   founding is described in the lede, and he has a role line like the other two.
+5. **`founders.jpg` is now actually used** — beside the husband-and-wife copy it was always
+   meant to illustrate. It and `shopfront-day.jpg` were catalogued as placed but never
+   referenced; `shopfront-day.jpg` and `reception-corner.jpg` are deleted and the manifest
+   corrected.
+6. **The band crop on `treatments.html` cut the lotus mark in half** — a 16/6 frame centred
+   on a 1600×2401 portrait source. Now `object-position: 50% 32%`.
+7. **Cards re-columned to 3 with subgrid.** `auto-fit` resolved to four columns above 1280px,
+   orphaning a row of two, and card heights within a row differed by up to 52px.
+8. **Uppercase dropped from the qualification line.** "BDS hons(Sheffield)" was rendering as
+   "BDS HONS(SHEFFIELD)"; for a regulated qualification string that is worth getting right.
+
+The reviewer verified the regulated-content discipline term by term and found **no breach** —
+and noted that the practice's own live site carries "gold standard", "outstanding dentistry",
+"Real Patients, Real Results" and a before-and-after section, none of which this build
+reproduces.
