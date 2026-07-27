@@ -10,7 +10,11 @@ Operational handoff only. `OUTREACH_LOG.md` remains the source of truth.
 - Last trusted commit: initial build commit on `main`
 - Known untrusted state: none
 - Next exact action: none for the build. Before anything is deployed: add a map to the Visit page, plus canonical, Open Graph and `LocalBusiness` structured data.
-- Deploy URL: not deployed. No outreach authorised.
+- Deploy URL: **https://plainset.github.io/pinner-dental-care-demo/** (repo: https://github.com/Plainset/pinner-dental-care-demo) — published to GitHub Pages 2026-07-27 on
+  Alex's explicit instruction. Verified live: all 3 pages HTTP 200, 0 broken images,
+  0 console errors.
+  **Published for review only — this build is not signed off.**
+
 - Local preview: `pinner-dental-care-site` in `.claude/launch.json`, port 4180.
 - Flags for Alex:
   1. **This is a design concept, and the register's `dated_only` classification stands.**
