@@ -1,5 +1,9 @@
 # Pipeline Status
 
+> **⚠️ IN REVIEW — NOT FINAL.** Marked as needing review on 2026-07-27 at Alex's
+> instruction. Published to GitHub Pages for review only; content, design and copy are
+> all still subject to change. Do not share as finished work.
+
 Operational handoff only. `OUTREACH_LOG.md` remains the source of truth.
 
 - Current phase: **COMPLETE — passed review at 9.0/10 on round 2** (pass mark 7.5), after 1 fix round. Post-pass items applied.
